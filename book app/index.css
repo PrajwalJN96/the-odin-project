@@ -1,63 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+body {
     display: flex;
-    background-color: #fffdfd;
-}
-#container{
-    max-height: max-content;
-    width: 70vw;
-    border: 3px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-}
-.books{
-    height: 100px;
-    width: 300px;
-    border: 2px solid red;
-    margin: 3px;
-    border-radius: 10px;
-    background-color: #dcdcdc;
-    color: #000000;
-}
-label   {
-    color: #f6eded;
+    justify-content: flex-start;
+    align-content: start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
-.buttons{
-    border:none;
-    outline: none;
-    color: beige;
-    background-color:#000;
-    padding:10px 20px;
-    position: absolute;
-    bottom:10px;
-    left:100px;
+.container {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
-.sideBar{
-    max-height: max-content;
-    /* border: 3px solid blue; */
-    background-color: #000000;
+
+.books {
+    height: min-content;
+    width: 250px;
+    border: 2px solid #ccc;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+label {
+    color: #f7f7f7;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.sideBar {
+    background-color: #333;
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    height: auto;
-
+    width: 30%;
+    padding: 20px;
 }
 
-.sideBar>input{
-    width: 70%;
-    padding: 2px;
-    margin:auto;
-    border: 1px solid rebeccapurple;
+.sideBar input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
-.container{
-    display: flex;
-    flex-wrap: wrap;
+button {
+    border: 2px solid white;
+    outline: none;
+    color: #fff;
+    background-color: #333; 
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #747474;
 }
