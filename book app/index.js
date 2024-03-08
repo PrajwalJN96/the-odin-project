@@ -20,7 +20,7 @@ function addBookToLibrary() {
     let noOfPagesContent = noOfPages.value;
     let readingStatus = false;
 
-     let book1 = new Book(
+    let book1 = new Book(
       titleContent,
       authorContent,
       noOfPagesContent,
@@ -39,16 +39,21 @@ function addBookToLibrary() {
     <h3>${book1.pages}</h3>
     <button class="button removeBook">Remove Book</button>
     <button class="button statusBook">Reading</button>`;
+
+    // Attach event listener to the newly created remove button
+    singleBook.querySelector(".removeBook").addEventListener("click", () => {
+      singleBook.remove();
+    });
+   let status =  singleBook.querySelector(".statusBook")
+   status.addEventListener("click", () => {
+      book1.readingStatus = !book1.readingStatus;
+      if(book1.readingStatus){
+        status.innerText = "not reading"
+      }else{
+        status.innerText = "reading"
+      }
+    });
   });
 }
 
 addBookToLibrary();
-
-let removeBook = document.getElementsByClassName("removeBook")
-let removeBooks = Array.from(removeBook)
-removeBooks.forEach((book)=> {
-  book.addEventListener("click",()=>{
-    book1.innerhtml=""
-    console.log("ermove");
-  })
-})
